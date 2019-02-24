@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Eaxon</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <style>
+            body
+            {
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+            }
+            h2
+            {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #303030;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+            h4
+            {
+                font-size: 18px;
+                line-height: 1.375em;
+                color: #303030;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+            .jumbotron
+            {
+                font-family: Montserrat, sans-serif;
+                background-color: #ffffff; /* White */
+                color: #580909;
+                padding: 100px 25px;
+            }
+            .container-fluid
+            {
+                padding: 60px 50px;
+            }
+            .bg-grey
+            {
+                background-color: #f6f6f6;
+            }
+            .logo
+            {
+                color: #580909;
+                font-size: 200px;
+            }
+
+            .navbar
+            {
+                font-family: Montserrat, sans-serif;
+                margin-bottom: 0;
+                background-color: #ffffff; /* White */
+                z-index: 9999;
+                border: 0;
+                font-size: 12px !important;
+                line-height: 1.42857143 !important;
+                letter-spacing: 4px;
+                border-radius: 0;
+            }
+
+            .navbar li a, .navbar .navbar-brand
+            {
+                color: #580909 !important;
+            }
+
+            .navbar-nav li a:hover, .navbar-nav li.active a
+            {
+                color: #580909 !important;
+                background-color: #fff !important;
+            }
+
+            .navbar-default .navbar-toggle
+            {
+                border-color: transparent;
+                color: #fff !important;
+            }
+
+            /* To slide elements in scroll */
+            .slideanim {visibility:hidden;}
+            .slide
+            {
+                /* The name of the animation */
+                animation-name: slide;
+                -webkit-animation-name: slide;
+                /* The duration of the animation */
+                animation-duration: 1s;
+                -webkit-animation-duration: 1s;
+                /* Make the element visible */
+                visibility: visible;
+            }
+
+            /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+            @keyframes slide
+            {
+                0% {
+                    opacity: 0;
+                    transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+            @-webkit-keyframes slide
+            {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            @media screen and (max-width: 768px)
+            {
+                .col-sm-4
+                {
+                    text-align: center;
+                    margin: 25px 0;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .logo {
+                    font-size: 150px;
+                }
+            }
+
+        </style>
+    <head>
+
+
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <!-- Top -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Logo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#values">VALUES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="jumbotron text-center">
+            <h1>Eaxon</h1>
+            <p>Ingenuity applied to the new technological era</p>
+        </div>
+
+        <!-- About -->
+        <div id="about" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>About Eaxon</h2>
+                    <h4>Eaxon implements new ideas in a digital world</h4>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-signal logo"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Values -->
+        <div id="values" class="container-fluid bg-grey">
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-globe logo slideanim"></span>
+                </div>
+                <div class="col-sm-8">
+                    <h2>Our Values</h2>
+                    <h4><strong>MISSION:</strong> Our mission is to create software solutions that enrich people's lives.</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div id="information" class="container-fluid bg-grey">
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid text-right">
+            <p>Eaxon</p>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function(event)
+                {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "")
+                    {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function()
+                        {
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            })
+
+            /* Slide elements in scroll */
+            $(window).scroll(function() {
+                $(".slideanim").each(function(){
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
