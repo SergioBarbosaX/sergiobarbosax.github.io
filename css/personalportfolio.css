@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: auto;
+    font-family: 'Julius Sans One', Times, serif;
+}
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 100;
+    background-color: white;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(235,235,235,.6);
+    /*padding: 20px 0px 20px 0px;*/
+}
+.navbar {
+    /*display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    background-color: white;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(235,235,235,.6);*/
+}
+#welcome-section {
+    width: 100%;
+    /*text-align: center;*/
+}
+#welcome-block {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+}
+h1 {
+    text-align: center;
+}
+#job {
+    font-size: 22px;
+    color: grey;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+#aboutme, #getintouch {
+    background-color: rgba(235,235,235,.6);
+}
+#aboutme-block {
+    font-size: 22px;
+    text-align: center;
+    position: static;
+    padding-top: 200px;
+}
+#container-sections {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+#welcome-section, #aboutme, #projects, #getintouch {
+    height: 100%;
+    width: 100%;
+}
+#projects {
+    padding-top: 30px;
+}
+#projects-sentence {
+    padding-left: 30px;
+}
+#getintouch-block {
+    font-size: 22px;
+    text-align: center;
+    position: static;
+    padding-top: 200px;
+}
+#footer {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 14px;
+    width: 100%;
+    z-index: 100;
+    opacity: 1;
+    text-align: center;
+    font-family: Arial, Times, serif;
+}
+.navbar-link {
+    text-decoration: none;
+    color: black;
+    padding: 0 50px;
+}
+.navbar-link:hover {
+    color: grey;
+}
+.projects-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.project-column {
+    float: left;
+    width: 33%;
+}
+/* Add padding BETWEEN each column */
+.projects-row,
+.projects-row > .project-column {
+    padding: 5px 40px;
+}
+.project-tile {
+    background-color: white;
+    border: 1px solid black;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.project-img {
+    width: 100%;
+    height: 200px;
+}
+.buttons-row, .project-description {
+    text-align: center;
+}
+.app-button, .app-code {
+    background-color: rgba(235,235,235,.6);
+    color: black;
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.fa-external-link-alt {
+    font-size: 16px;
+}
+.fa-free-code-camp {
+    font-size: 42px;
+    color: #ff0000;
+}
+.fa-html5 {
+    font-size: 24px;
+    color: #ff0000;
+}
+.fa-css3-alt {
+    font-size: 24px;
+    color: #00b3ff;
+}
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+    #navbar a {
+        max-width: 100%;
+        padding: 0px 5px 0px 5px;
+        float: none;
+        text-align: center;
+        display: block;
+    }
+    .project-column {
+        width: 100%;
+    }
+    #projects {
+        height: 300%;
+    }
+    .left-button, .right-button {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
